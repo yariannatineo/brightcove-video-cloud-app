@@ -1,0 +1,31 @@
+{
+  "name": "brightcove-video-cloud-app",
+  "version": "1.0.0",
+  "description": "Brightcove video cloud challengue for Technical Support Operations Intern.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yariannatineo/brightcove-video-cloud-app.git"
+  },
+  "author": "Yarianna Tineo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yariannatineo/brightcove-video-cloud-app/issues"
+  },
+  "homepage": "https://github.com/yariannatineo/brightcove-video-cloud-app#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.16"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
