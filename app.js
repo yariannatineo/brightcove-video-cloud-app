@@ -7,9 +7,12 @@ const cors = require('cors');
 const config = require('./config');
 const path = require("path");
 
+//PORT
+const PORT = config.PORT || 8080;
 
 //  db connection
 require('./db/mongoose');
+
 //  middlewares
 const tokenMiddleware = require('./middleware/tokenMiddleware');
 
@@ -47,6 +50,6 @@ if (process.env.NODE_ENV === 'production') {
 
 
 //  server process
-app.listen(config.PORT, () => {
-    console.log(`${config.PORT} Listening`);
+app.listen(PORT, () => {
+    console.log(`${PORT} Listening`);
 });
