@@ -29,6 +29,8 @@ API:
 
 5. Run API: type `npm run start-dev` in `brightcove-video-cloud-app` folder
 
+To create an optimized build, run `npm run build` in `client` folder
+
 6. Run client: type `npm start` in `client` folder.
 
 
