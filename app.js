@@ -34,24 +34,27 @@ app.use(tokenMiddleware);
 app.use('/api/video', videoRouter)
 app.use('/api/playlist', playlistRouter)
 
-app.get("/api", (req,res) => {
-    res.status(200).json({msg: "Hello"});
-}); 
+app.get("/api", (req, res) => {
+    res.status(200).json({ msg: "Hello" });
+});
 
 // ... other app.use middleware 
 // app.use(express.static(path.join(__dirname, "client", "build")))
 
-// ...
-app.use(express.static('client/build'));
-// Right before your app.listen(), add this:
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-});
+if (process.env.NODE_ENV === 'production') {
+
+    app.use(express.static('client/build'));
+   
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
+
 // app.get("*", (req, res) => {
 //     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 // });
 
-  
+
 //  server process
 app.listen(config.PORT, () => {
     console.log(`${config.PORT} Listening`);
