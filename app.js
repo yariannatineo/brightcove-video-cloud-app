@@ -33,6 +33,10 @@ app.use(tokenMiddleware);
 app.use('/api/video', videoRouter)
 app.use('/api/playlist', playlistRouter)
 
+app.get("/api", (req,res) => {
+    res.status(200).json({msg: "Hello"});
+}); 
+
 // ... other app.use middleware 
 app.use(express.static(path.join(__dirname, "client", "build")))
 
@@ -41,6 +45,7 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
+
   
 //  server process
 app.listen(config.PORT, () => {
