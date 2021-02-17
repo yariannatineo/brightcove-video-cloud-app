@@ -5,6 +5,9 @@ let config = {};
 //  client id credentials
 config.CLIENT_ID = process.env.CLIENT_ID || '';
 
+//port
+config.PORT = process.env.PORT || '';
+
 //  client secret credentials
 config.CLIENT_SECRET = process.env.CLIENT_SECRET || '';
 

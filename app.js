@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 
 //  others
 const cors = require('cors');
+const config = require('./config');
 
 //  db connection
 require('./db/mongoose');
@@ -32,6 +33,6 @@ app.use('/video', videoRouter)
 app.use('/playlist', playlistRouter)
 
 //  server process
-app.listen(3001, () => {
+app.listen(config.PORT, () => {
     console.log('Server started on port 3001')
 });
