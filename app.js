@@ -24,7 +24,7 @@ const app = express();
 //  third party libraries for the app
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+//app.use(cors());
 
 //  use middleware before access to video route and playlist route
 app.use(tokenMiddleware);
