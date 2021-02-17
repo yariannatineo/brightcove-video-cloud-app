@@ -33,7 +33,7 @@ app.use('/video', videoRouter)
 app.use('/playlist', playlistRouter)
 
 app.get('/', function(req, res) {
-    res.send('hello world');
+    
   });
   
 //  server process
