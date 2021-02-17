@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 //  others
 const cors = require('cors');
 const config = require('./config');
+const path = require("path");
 
 //  db connection
 require('./db/mongoose');
@@ -32,9 +33,14 @@ app.use(tokenMiddleware);
 app.use('/video', videoRouter)
 app.use('/playlist', playlistRouter)
 
-app.get('/', function(req, res) {
-    
-  });
+// ... other app.use middleware 
+app.use(express.static(path.join(__dirname, "client", "build")))
+
+// ...
+// Right before your app.listen(), add this:
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
   
 //  server process
 app.listen(config.PORT, () => {
