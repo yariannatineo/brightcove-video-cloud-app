@@ -33,4 +33,7 @@ API:
 
 To create an optimized build, run `npm run build` in `client` folder
 
+## Demo
+https://bc-video-cloud-app.herokuapp.com/
+
 
