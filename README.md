@@ -21,15 +21,15 @@ API:
 
 1. Install [Node.js](https://nodejs.org/) and use [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) as cloud db manager, [MongoDB Compass](https://www.mongodb.com/products/compass) may be useful as well, to work on the database.
 
-2. Create database called `videocloud` or use any other name, for MongoDB Atlas change the "config.mongodb_uri" object with the string of the connection in `config/config.js` file, in other case replace the string with the one you require.
+2. Create database called `videocloud` or use any other name, for MongoDB Atlas change the "config.mongodb_uri" object with the string of the connection in `config/index.js` file, in other case replace the string with the one you require.
 
-3. Replace `config.CLIENT_ID` and `config.CLIENT_SECRECT` in `config/config.js` with the corresponding credentials or use the credentials already in the `config.js`.
+3. Replace `config.CLIENT_ID` and `config.CLIENT_SECRECT` in `config/index.js` with the corresponding credentials or use the credentials already in the `config/index.js`.
 
 4. Install all dependencies both in `client` and `brightcove-video-cloud-app` folder by typing `npm install` inside each of them.
 
 5. Run API: type `npm run start-dev` in `brightcove-video-cloud-app` folder
 
-7. Run client: type `npm start` in `client` folder.
+7. Run Client: type `npm start` in `client` folder.
 
 To create an optimized build, run `npm run build` in `client` folder
 
