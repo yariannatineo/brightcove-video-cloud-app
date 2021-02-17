@@ -29,24 +29,21 @@ app.use(cors());
 //  use middleware before access to video route and playlist route
 app.use(tokenMiddleware);
 
-//  routes
-//app.use('/token', tokenRouter)
-app.use('/api/video', videoRouter)
-app.use('/api/playlist', playlistRouter)
-
 app.get("/api", (req, res) => {
     res.status(200).json({ msg: "Hello" });
 });
 
 if (process.env.NODE_ENV === 'production') {
+    //  routes
+    //app.use('/token', tokenRouter)
+    app.use('/api/video', videoRouter)
+    app.use('/api/playlist', playlistRouter)
 
     app.use(express.static(path.join(__dirname, "client", "build")));
     app.get("*", (req, res) => {
         res.sendFile(path.join(__dirname, "client", "build", "index.html"));
     });
 }
-
-
 
 
 //  server process
