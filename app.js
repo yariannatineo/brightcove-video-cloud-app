@@ -7,6 +7,7 @@ const cors = require('cors');
 const config = require('./config');
 const path = require("path");
 
+
 //  db connection
 require('./db/mongoose');
 //  middlewares
@@ -38,13 +39,17 @@ app.get("/api", (req,res) => {
 }); 
 
 // ... other app.use middleware 
-app.use(express.static(path.join(__dirname, "client", "build")))
+// app.use(express.static(path.join(__dirname, "client", "build")))
 
 // ...
+app.use(express.static('client/build'));
 // Right before your app.listen(), add this:
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+// });
 
   
 //  server process
