@@ -1,18 +1,8 @@
-require('dotenv').config();
-//  config object
-let config = {};
-
-//  client id credentials
-config.CLIENT_ID = process.env.CLIENT_ID || '';
-
-//port
-config.PORT = process.env.PORT || '';
-
-//  client secret credentials
-config.CLIENT_SECRET = process.env.CLIENT_SECRET || '';
-
-// This is for the connection string of mongodb
-config.mongodb_uri = process.env.MONGODB_URI || '';
-
-//  export
-module.exports = config;
+// keys.js - figure out what set of credentials to return
+if (process.env.NODE_ENV === 'production') {
+    // we are in production - return the prod set of keys
+    module.exports = require('./production');
+} else {
+    // we are in development - return the dev keys!!!
+    module.exports = require('./dev');
+}
