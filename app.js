@@ -30,8 +30,8 @@ app.use(tokenMiddleware);
 
 //  routes
 //app.use('/token', tokenRouter)
-app.use('/video', videoRouter)
-app.use('/playlist', playlistRouter)
+app.use('/api/video', videoRouter)
+app.use('/api/playlist', playlistRouter)
 
 // ... other app.use middleware 
 app.use(express.static(path.join(__dirname, "client", "build")))
@@ -44,5 +44,5 @@ app.get("*", (req, res) => {
   
 //  server process
 app.listen(config.PORT, () => {
-    console.log('Server started on port 3001')
+    console.log(`${config.PORT} Listening`);
 });
