@@ -50,6 +50,6 @@ if (process.env.NODE_ENV === 'production') {
 
 
 //  server process
-app.listen(PORT, () => {
-    console.log(`${PORT} Listening`);
+app.listen(8080, () => {
+    console.log(`${8080} Listening`);
 });
