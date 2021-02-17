@@ -12,7 +12,7 @@ config.PORT = process.env.PORT || '';
 config.CLIENT_SECRET = process.env.CLIENT_SECRET || '';
 
 // This is for the connection string of mongodb
-config.mongodb_uri = process.env.MONGODB_URI || '';
+config.MONGODB_URI = process.env.MONGODB_URI || '';
 
 //  export
 module.exports = config;
