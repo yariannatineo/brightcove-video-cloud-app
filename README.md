@@ -2,7 +2,7 @@
 Brightcove video cloud challenge, which retrieves videos and playlists from VideoCloud API based on the account id, and then generates this information in a DB, and finally shows the duration of all videos and each playlist.
 
 ## NOTE 
-In the account that was assigned to the challengue, in the media section a total of 50 videos are listed, but at the time of making the request to be able to save them in the database, only 20 were extracted.
+In the account that was assigned to the challenge, in the media section a total of 50 videos are listed, but at the time of making the request to be able to save them in the database, only 20 were extracted.
 
 ## Some details
 Technologies
