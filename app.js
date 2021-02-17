@@ -32,6 +32,10 @@ app.use(tokenMiddleware);
 app.use('/video', videoRouter)
 app.use('/playlist', playlistRouter)
 
+app.get('/', function(req, res) {
+    res.send('hello world');
+  });
+  
 //  server process
 app.listen(config.PORT, () => {
     console.log('Server started on port 3001')
